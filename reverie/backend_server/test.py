@@ -30,7 +30,7 @@ def ChatGPT_request(prompt):
     model="gpt-3.5-turbo", 
     messages=[{"role": "user", "content": prompt}]
     )
-    return completion["choices"][0]["message"]["content"]
+    return completion["choices"][1]["message"]["content"]
   
   except: 
     print ("ChatGPT ERROR")
@@ -61,7 +61,7 @@ Example output json:
 {"output": "[["Jane Doe", "Hi!"], ["John Doe", "Hello there!"] ... ]"}
 """
 
-print (ChatGPT_request(prompt))
+print(ChatGPT_request(prompt))
 
 
 

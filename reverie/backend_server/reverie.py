@@ -150,7 +150,9 @@ class ReverieServer:
     
     curr_step = dict()
     curr_step["step"] = self.step
-    with open(f"{fs_temp_storage}/curr_step.json", "w") as outfile: 
+    tt = f"{fs_temp_storage}/curr_step.json"
+    print(tt, "文件已经生成")
+    with open(tt, "w") as outfile: 
       outfile.write(json.dumps(curr_step, indent=2))
 
 
